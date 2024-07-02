@@ -61,13 +61,13 @@
                 </ul>
             </div>
             <div class="flex justify-center gap-4 social-icons">
-                <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" target="_blank">
+                <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
-                <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" target="_blank">
+                <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-instagram"></i>
                 </a>
-                <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-10 w-10 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" target="_blank">
+                <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-rs-map-marker"></i>
                 </a>
             </div>
@@ -128,7 +128,7 @@
                     <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                         <div class="flex justify-between w-full px-1 pt-px">
                             <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
-                            <i class="fi fi-br-moon text-black dark:text-transparent"></i>
+                            <i class="fi fi-br-moon text-blue dark:text-transparent"></i>
                         </div>
                         <span class="sr-only">Toggle theme</span>
                         <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
@@ -175,13 +175,13 @@
             </li>
             <li>
                 <div class="flex justify-center gap-4 social-icons">
-                    <a href="https://wa.me/34622406965" class="h-6 w-6 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" target="_blank">
+                    <a href="https://wa.me/34622406965" class="h-6 w-6 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>
                     </a>
-                    <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-6 w-6 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" target="_blank">
+                    <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-6 w-6 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-instagram"></i>
                     </a>
-                    <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-6 w-6 aspect-square rounded-md bg-black/5 p-2 ring-1 ring-black/10" target="_blank">
+                    <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-6 w-6 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                         <i class="flex text-base leading-none fi fi-rs-map-marker"></i>
                     </a>
                 </div>
@@ -234,7 +234,7 @@
             <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                 <div class="flex justify-between w-full px-1 pt-px">
                     <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
-                    <i class="fi fi-br-moon text-black dark:text-transparent"></i>
+                    <i class="fi fi-br-moon text-blue dark:text-transparent"></i>
                 </div>
                 <span class="sr-only">Toggle theme</span>
                 <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>

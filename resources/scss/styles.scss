@@ -1,8 +1,8 @@
 @use './globals' as *;
 @use './animations/animations' as *;
 body{
-    @apply bg-white text-black dark:bg-black dark:text-white;
-    font-family: $secondary-font;
+    @apply bg-white text-blue dark:bg-blue dark:text-white;
+    font-family: $primary-font;
     h1, h2, h3, h4, h5, h6{
         font-family: $primary-font;
     }
@@ -40,17 +40,17 @@ body{
     // }
     .logo-hamburguer{
         svg{
-            @apply w-36 h-auto fill-black dark:fill-white;
+            @apply w-36 h-auto fill-blue dark:fill-white;
         }
     }
     .toast{
-        @apply flex flex-col items-center justify-between bg-white text-black dark:bg-black dark:text-white;
+        @apply flex flex-col items-center justify-between bg-white text-blue dark:bg-blue dark:text-white;
         .progress{
-            @apply bg-black dark:bg-white;
+            @apply bg-blue dark:bg-white;
         }
     }
     header{
-        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-black dark:text-white;
+        @apply h-auto fixed top-0 w-full block shadow-none bg-transparent text-blue dark:text-white;
         transition: top 0.3s, background-color 0.3s ease;
         i {
             @apply leading-none text-lg;
@@ -65,7 +65,7 @@ body{
         }
     }
     .mobile-menu{
-        @apply bg-white text-black dark:bg-black dark:text-white;
+        @apply bg-white text-blue dark:bg-blue dark:text-white;
     }
     header, .mobile-menu{
         a{
@@ -107,7 +107,7 @@ body{
         }
     
         .openbtn span {
-            @apply w-1/2 h-[3px] relative left-[12px] bg-black dark:bg-white rounded inline ;
+            @apply w-1/2 h-[3px] relative left-[12px] bg-blue dark:bg-white rounded inline ;
             transition: all .4s;
         }
     
@@ -138,10 +138,10 @@ body{
     }
     // línea divisoria
     .divider{ 
-        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-30 dark:via-white my-16;
+        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-30 dark:via-white my-16;
     }
     // Social icons
     .social-icons a{
-        @apply aspect-square rounded-md flex justify-center items-center ring-1 text-black/70 bg-black/5 ring-black/20 hover:bg-primary hover:text-white hover:ring-primary_darker transition-all dark:text-white/50 dark:bg-white/5 dark:ring-white/20 dark:hover:bg-primary dark:hover:text-white dark:hover:ring-primary_darker;
+        @apply aspect-square rounded-md flex justify-center items-center ring-1 text-blue/70 bg-blue/5 ring-blue/20 hover:bg-primary hover:text-white hover:ring-secondary_blue transition-all dark:text-white/50 dark:bg-white/5 dark:ring-white/20 dark:hover:bg-primary dark:hover:text-white dark:hover:ring-secondary_blue;
     }
 }

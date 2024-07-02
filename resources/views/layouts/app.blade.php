@@ -47,7 +47,7 @@
                     <div class="font-semibold" x-text="message"></div>
                     <button
                         @click="close"
-                        class="w-[30px] h-[30px] flex items-center justify-center rounded-full hover:bg-black/10 transition-colors"
+                        class="w-[30px] h-[30px] flex items-center justify-center rounded-full hover:bg-blue/10 transition-colors"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

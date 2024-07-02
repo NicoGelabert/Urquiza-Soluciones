@@ -1,7 +1,7 @@
 .home-hero-banner{
     @apply flex items-center justify-evenly;
     hr{
-        @apply border-t-2 border-black dark:border-white;
+        @apply border-t-2 border-blue dark:border-white;
     }
     img{
         @apply w-auto h-[90%] rounded-3xl rounded-e-none object-cover;
@@ -17,7 +17,7 @@
         .imgBx{
             @apply relative h-full w-full rounded-3xl bg-cover bg-center;
             .price{
-                @apply absolute flex items-center bg-white dark:bg-black rounded-bl-3xl h-20 w-auto right-0 px-4 py-4;
+                @apply absolute flex items-center bg-white dark:bg-blue rounded-bl-3xl h-20 w-auto right-0 px-4 py-4;
             }
             .price::after{
                 @apply absolute rounded-full bg-transparent h-12 -left-12 top-0 w-12 shadow-[24px_-24px_0_0_rgba(251,252,255,1)] dark:shadow-[24px_-24px_0_0_rgba(10,10,10,1)];
