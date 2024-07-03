@@ -14,13 +14,15 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->text('title', 50);
+            $table->text('name', 50);
+            $table->text('icon', 100)->nullable();
             $table->text('slug', 50);
             $table->string('image', 2000)->nullable();
             $table->string('image_mime')->nullable();
             $table->integer('image_size')->nullable();
             $table->longText('description')->nullable();
-            $table->boolean('published')->default(true);
+            $table->boolean('active')->default(true);
+            $table->foreignId('parent_id')->nullable()->constrained('services');
             $table->foreignIdFor(User::class, 'created_by')->nullable();
             $table->foreignIdFor(User::class, 'updated_by')->nullable();
             $table->softDeletes();

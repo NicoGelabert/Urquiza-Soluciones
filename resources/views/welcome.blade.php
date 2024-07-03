@@ -4,7 +4,7 @@
 
     <x-services :services="$services"/>
     
-    <hr class="divider" />
+    <!-- <hr class="divider" /> -->
     
     <x-benefits />
     
