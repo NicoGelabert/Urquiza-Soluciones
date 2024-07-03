@@ -5,7 +5,7 @@
         <div class="flex flex-col justify-center md:items-stretch gap-12 max-w-screen-xl px-4 pt-24 mx-auto md:px-16 md:flex-row overflow-hidden">
 
             <div class="flex flex-col justify-start gap-8 w-full md:w-1/2">
-                <hr class="animate-hr border-t-2 border-blue" />
+                <hr class="border-t-2 border-blue" />
                 <div class="flex justify-between">
                     <h3 class="animate-h3">0{{ $service->id }}</h3>
                     <i class="fi fi-br-arrow-up-left text-4xl animate-arrow overflow-hidden"></i>
@@ -106,7 +106,6 @@
     }, delay);
   }
   
-    var hr = document.querySelector('.animate-hr');
     var h3 = document.querySelector('.animate-h3');
     var h1 = document.querySelector('.animate-h1');
     var p = document.querySelector('.animate-p');

@@ -2,7 +2,11 @@
 
 // Botón Primario con Animación 
 .btn-primary{
-    @apply w-fit relative px-4 py-2 text-lg rounded-full bg-blue text-white hover:bg-primary hover:text-white hover:border-primary transition-all;
+    @apply w-fit relative px-4 py-2 text-sm uppercase rounded-full bg-primary text-blue hover:bg-blue hover:text-white hover:border-primary transition-all;
+    font-family: $primary-font;
+}
+.btn-secondary{
+    @apply w-fit relative px-4 py-2 text-sm uppercase rounded-full bg-transparent text-white hover:bg-blue hover:text-white hover:border-primary transition-all;
     font-family: $primary-font;
     i{
         @apply absolute right-0 top-1/2 text-transparent;
@@ -10,17 +14,17 @@
         transition: transform 0.3s, color 0.3s;
     }
 }
-.btn-primary:hover i{
+.btn-secondary:hover i{
     @apply text-white;
-    transform: translateX(-50%) translateY(-45%);
+    transform: translateX(-30%) translateY(-43%);
 }
-.btn-primary:hover span{
+.btn-secondary:hover span{
     @apply pr-4
 }
-.btn-primary:hover span{
+.btn-secondary:hover span{
     @apply pr-6
 }
-.btn-primary span{
+.btn-secondary span{
     transition: padding-right 0.3s;
 }
 // Fin Botón Primario con Animación 

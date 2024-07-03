@@ -1,14 +1,29 @@
 .home-hero-banner{
-    @apply flex items-center justify-evenly;
+    @apply flex items-center justify-evenly bg-gradient-to-b from-blue to-secondary_blue text-white h-screen;
+    i{
+        @apply text-3xl leading-none;
+    }
     hr{
         @apply border-t-2 border-blue dark:border-white;
     }
     img{
-        @apply w-auto h-[90%] rounded-3xl rounded-e-none object-cover;
+        @apply w-auto;
     }
     .vertical-text{
-        transform: rotate(180deg);
         writing-mode: vertical-lr;
+    }
+    .splide__pagination{
+        @apply absolute mt-16 gap-1;
+        .splide__pagination__page{
+            @apply bg-white w-2 h-2;
+            border-radius:20px;
+            cursor:pointer;
+            transition:0.3s ease width;
+
+        }
+        .splide__pagination__page.is-active{
+            @apply bg-primary scale-100 w-4;
+        }
     }
 }
 #services{
@@ -49,7 +64,6 @@
         }
         .splide__pagination__page.is-active{
             @apply bg-primary scale-100 w-8;
-            ;
         }
     }
     .vertical-text{

@@ -146,12 +146,12 @@ thumbnails.mount();
   var homeHeroBanner = new Splide('.home-hero-banner', {
       type        : 'fade',
       rewind      : true,
-      pagination  : false,
+      pagination  : true,
       isNavigation: false,
       arrows      : false,
       focus       : 'center',
       autoplay    : 'play',
-      interval    : '7000'
+      interval    : '5000'
   });
 
   homeHeroBanner.on('mounted move', function() {
@@ -172,27 +172,19 @@ thumbnails.mount();
   }
 
   function animateSlideElements(slide) {
-    var hr = slide.querySelector('.animate-hr');
-    var h3 = slide.querySelector('.animate-h3');
     var h1 = slide.querySelector('.animate-h1');
     var p = slide.querySelector('.animate-p');
     var img = slide.querySelector('.animate-img');
-    var caption = slide.querySelector('.animate-caption');
     var h5 = slide.querySelector('.animate-h5');
     var button = slide.querySelector('.animate-button');
-    var border = slide.querySelector('.animate-border');
-    var arrow = slide.querySelector('.animate-arrow');
+    var icon = slide.querySelector('.animate-icon');
 
-    animateElement(hr, 200); // 0.2 segundos después
-    animateElement(h3, 500); // 0.5 segundos después
+    animateElement(icon, 500); // 0.5 segundos después (borde)
     animateElement(h1, 750); // 0.75 segundos después
     animateElement(p, 1000); // 1 segundo después
     animateElement(img, 1250); // 1.25 segundos después
-    animateElement(caption, 1500); // 1.5 segundos después
-    animateElement(border, 1750); // 1.75 segundos después (borde)
-    animateElement(h5, 2000); // 2 segundos después (texto dentro del borde)
-    animateElement(button, 2250); // 2.25 segundos después
-    animateElement(arrow, 2500); // 2.5 segundos después (flecha)
+    animateElement(h5, 1500); // 1.5 segundos después (texto dentro del borde)
+    animateElement(button, 1750); // 1.75 segundos después
   }
 
   function animateSlideOutElements(slide) {

@@ -5,4 +5,10 @@ header{
 }
 .scrolled-bottom{
     @apply shadow-md bg-white text-blue dark:bg-blue dark:text-white;
+    .logo a{
+        @apply hover:text-blue;
+    }
+    .social-icons{
+        @apply text-blue;
+    }
 }

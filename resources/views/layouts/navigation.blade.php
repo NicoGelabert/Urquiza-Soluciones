@@ -4,7 +4,7 @@
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     }"
     @cart-change.window="cartItemsCount = $event.detail.count"
-    class="flex justify-between md:justify-center z-10 w-full"
+    class="flex justify-between md:justify-center z-10 w-full pt-4 md:pt-0"
     id="navbar"
 >
     <div class="logo flex items-center ml-6 md:hidden">
@@ -81,10 +81,10 @@
         </div>
         <ul class="grid grid-flow-col items-center justify-end gap-4">
             <!-- Idiomas -->
-            <li x-data="{open: false}" class="relative">
+            <li x-data="{open: false}" class="relative h-full">
                 <a
                     @click="open = !open"
-                    class="cursor-pointer flex items-center px-navbar-item pr-5  "
+                    class="cursor-pointer flex items-center px-navbar-item pr-5 h-full"
                     :class="{'w-full': open}"
                 >
                     <span class="flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
@@ -141,7 +141,7 @@
                 <a
                     @click="open = !open"
                     :class="{'w-full': open}"
-                    class="cursor-pointer flex items-center px-navbar-item w-max hover:text-primary"
+                    class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                 {{ __('Servicios') }}
                 <svg
@@ -175,13 +175,13 @@
             </li>
             <li>
                 <div class="flex justify-center gap-4 social-icons">
-                    <a href="https://wa.me/34622406965" class="h-6 w-6 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+                    <a href="https://wa.me/34622406965" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>
                     </a>
-                    <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-6 w-6 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+                    <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-instagram"></i>
                     </a>
-                    <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-6 w-6 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+                    <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-rs-map-marker"></i>
                     </a>
                 </div>

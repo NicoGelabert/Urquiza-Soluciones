@@ -8,40 +8,13 @@
     }
 }
 
-/* Estado inicial */
-.animate-border {
-    position: relative;
-}
-
-.animate-border::before {
-    background-color: blue; /* Ajusta el color según tu diseño */
-    content: "";
-    height: 0; /* Altura inicial del borde */
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: height 0.6s ease-in-out;
-    width: 2px; /* Ancho del borde */
-}
-
-.dark .animate-border::before {
-    background-color: white; /* Color para modo oscuro */
-}
-
-/* Estado final (cuando se activa) */
-.animate-border.active::before {
-    animation: borderGrow 0.6s forwards;
-}
-
 /* Otras animaciones */
-.animate-hr,
-.animate-h3,
 .animate-h1,
 .animate-p,
 .animate-img,
-.animate-caption,
 .animate-h5,
 .animate-button,
+.animate-icon,
 .animate-service-item {
     opacity: 0;
     transform: translateY(20px); /* Trasladar hacia abajo para la animación */
@@ -52,11 +25,6 @@
     transform: translateX(100%); /* Trasladar hacia la derecha para la animación de la imagen */
 }
 
-.animate-hr {
-    transform: scaleX(0); /* Escalar horizontalmente desde 0 */
-    transform-origin: left; /* Empezar desde la izquierda */
-}
-
 .animate-h5 {
     transform: translateY(20px);
 }
@@ -65,18 +33,11 @@
     transform: translateY(20px);
 }
 
-/* Estado final (cuando se activa) */
-.animate-hr.active {
-    opacity: 1;
-    transform: scaleX(1);
-}
-
-.animate-h3.active,
 .animate-h1.active,
 .animate-p.active,
-.animate-caption.active,
 .animate-h5.active,
 .animate-button.active,
+.animate-icon.active,
 .animate-service-item.active {
     opacity: 1;
     transform: translateY(0);

@@ -45,6 +45,8 @@
                                     <CustomInput class="mb-2" v-model="homeHeroBanner.headline" label="Image Headline" />
                                     <CustomInput type="textarea" class="mb-2" v-model="homeHeroBanner.description" label="Description" />
                                     <CustomInput class="mb-2" v-model="homeHeroBanner.link" label="Image Link" />
+                                    <CustomInput class="mb-2" v-model="homeHeroBanner.service" label="Service" />
+                                    <CustomInput class="mb-2" v-model="homeHeroBanner.title" label="Title" />
                                     <CustomInput type="file" class="mb-2" label="Image" @change="file => homeHeroBanner.image = file" />
                                 </div>
                                 <footer class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
@@ -92,7 +94,8 @@ const homeHeroBanner = ref({
     headline: props.homeHeroBanner.headline,
     description: props.homeHeroBanner.description,
     link: props.homeHeroBanner.link,
-    background: props.homeHeroBanner.background
+    service: props.homeHeroBanner.service,
+    title: props.homeHeroBanner.title
 })
 console.log(homeHeroBanner)
 const loading = ref(false)
@@ -111,7 +114,8 @@ onUpdated(() => {
         headline: props.homeHeroBanner.headline,
         description: props.homeHeroBanner.description,
         link: props.homeHeroBanner.link,
-        background: props.homeHeroBanner.background
+        service: props.homeHeroBanner.service,
+        title: props.homeHeroBanner.title
     }
 })
 
