@@ -6,7 +6,7 @@
     
     <!-- <hr class="divider" /> -->
     
-    <x-benefits />
+    <!-- <x-benefits /> -->
     
     <x-features :features="$features"/>
         

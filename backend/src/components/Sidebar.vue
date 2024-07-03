@@ -69,6 +69,15 @@
                 <EyeDropperIcon class="w-5"/>
             </span>
         </router-link>
+        <router-link :to="{name: 'app.features'}"
+                    class="flex items-center justify-between p-2 gap-8 rounded transition-colors hover:bg-white">
+            <span class="text-sm">
+                Features
+            </span>
+            <span class="mr-2">
+                <EyeDropperIcon class="w-5"/>
+            </span>
+        </router-link>
         <router-link :to="{name: 'app.tags'}"
                     class="flex items-center justify-between p-2 gap-8 rounded transition-colors hover:bg-white">
             <span class="text-sm">

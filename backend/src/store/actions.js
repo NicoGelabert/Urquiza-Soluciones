@@ -585,6 +585,64 @@ export function deleteProject({commit}, id) {
   return axiosClient.delete(`/projects/${id}`)
 }
 
+// FEATURES
+export function getFeatures({commit, state}, {url = null, search = '', per_page, sort_field, sort_direction} = {}) {
+  commit('setFeatures', [true])
+  url = url || '/features'
+  const params = {
+    per_page: state.features.limit,
+  }
+  return axiosClient.get(url, {
+    params: {
+      ...params,
+      search, per_page, sort_field, sort_direction
+    }
+  })
+    .then((response) => {
+      commit('setFeatures', [false, response.data])
+    })
+    .catch(() => {
+      commit('setFeatures', [false])
+    })
+}
+
+export function getFeature({commit}, id) {
+  return axiosClient.get(`/features/${id}`)
+}
+
+export function createFeature({commit}, feature) {
+  if (feature.image instanceof File) {
+    const form = new FormData();
+    form.append('title', feature.title);
+    form.append('image', feature.image);
+    form.append('description', feature.description);
+    form.append('published', feature.published ? 1 : 0);
+    feature = form;
+  }
+  return axiosClient.post('/features', feature)
+}
+
+export function updateFeature({commit}, feature) {
+  const id = feature.id
+  if (feature.image instanceof File) {
+    const form = new FormData();
+    form.append('id', feature.id);
+    form.append('title', feature.title);
+    form.append('image', feature.image);
+    form.append('description', feature.description);
+    form.append('published', feature.published ? 1 : 0);
+    form.append('_method', 'PUT');
+    feature = form;
+  } else {
+    feature._method = 'PUT'
+  }
+  return axiosClient.post(`/features/${id}`, feature)
+}
+
+export function deleteFeature({commit}, id) {
+  return axiosClient.delete(`/features/${id}`)
+}
+
 //TAGS
 export function getTags({commit, state}, {sort_field, sort_direction} = {}) {
   commit('setTags', [true])
