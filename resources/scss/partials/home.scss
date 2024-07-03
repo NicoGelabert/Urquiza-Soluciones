@@ -76,8 +76,7 @@
     }
 }
 #contact{
-    .vertical-text{
-        @apply rotate-180;
-        writing-mode: vertical-lr;
+    .social-icons{
+        @apply text-blue
     }
 }

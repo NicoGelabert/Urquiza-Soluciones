@@ -6,32 +6,74 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title inertia>{{ config('app.name', 'Punto Sur Pastelería') }}</title>
+        <meta name="description" content="{{__('Bienvenido a Urquiza Soluciones, somos una empresa que entiende la importancia de contar con sistemas de climatización eficientes, instalaciones eléctricas seguras y sistemas de fontanería confiables en su hogar o negocio. Por eso, nos enorgullece ofrecer servicios de primera calidad que garantizan su comodidad y tranquilidad en todo momento.')}}" lang="es">
 
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/img/puntosur.ico') }}">
+        <meta name="keywords" content="{{__('Instalación de Aires Acondicionados en Málaga, carga de gas, soluciones de electricidad en Málaga, Servicio de fontanería, Reformas en general.')}}">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=albert-sans:200,300,500,700|battambang:100,300,400,700,900" rel="stylesheet" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/img/icono_urquiza_soluciones.ico') }}">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <style>
-    #loader-wrapper{
-        width:100%;
-        height: 100vh;
-        display:flex;
+    #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 1000;
+        gap: 2rem;
     }
-    
+    #loader-wrapper svg{
+        fill:#6C4852;
+    }
+
+    #loader {
+        width: 50%;
+        height: 5px;
+        background-color: #e0e0e0;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #progress-bar {
+        height: 100%;
+        width: 0;
+        background-color: #011627;
+        border-radius: 15px;
+        transition: width 0.3s;
+    }
+
+    #loader-percentage {
+        font-size: 24px;
+        color: #011627;
+    }
+
     #body-content{
         display:none;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    #body-content.fade-in {
+        opacity: 1;
     }
 </style>
     <body>
-        <div id="loader-wrapper">
-            <x-spinner />
+    <div id="loader-wrapper">
+            <div class="w-40">
+                <x-application-logo/>
+            </div>
+            <div id="loader">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="loader-percentage">0%</div>
         </div>
         <div id="body-content">
             <!-- Toast -->
@@ -85,14 +127,23 @@
     </body>
 </html>
 <script>
-    window.onload = function () {
-    //Find the element with id "loader-wrapper" and hide it
-        var loaderWrapper = document.getElementById('loader-wrapper');
-        var bodyContent = document.getElementById('body-content');
-        
-        if (loaderWrapper) {
-            loaderWrapper.style.display = 'none';
-            bodyContent.style.display = 'block';
-        }
-    };
+    document.addEventListener("DOMContentLoaded", function() {
+        let percentage = 0;
+        const progressBar = document.getElementById('progress-bar');
+        const interval = setInterval(function() {
+            if (percentage < 100) {
+                percentage += 1;
+                document.getElementById('loader-percentage').innerText = percentage + '%';
+                progressBar.style.width = percentage + '%';
+            } else {
+                clearInterval(interval);
+                document.getElementById('loader-wrapper').style.display = 'none';
+                const content = document.getElementById('body-content');
+                content.style.display = 'block';
+                setTimeout(function() {
+                    content.classList.add('fade-in');
+                }, 10);
+            }
+        });
+    });
 </script>
