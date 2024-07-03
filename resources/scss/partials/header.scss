@@ -8,6 +8,9 @@ header{
     .logo a{
         @apply hover:text-blue;
     }
+    .openbtn span {
+        @apply bg-blue;
+    }
     .social-icons{
         @apply text-blue;
     }

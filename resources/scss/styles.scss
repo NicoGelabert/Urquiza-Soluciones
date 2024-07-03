@@ -13,10 +13,10 @@ body{
         @apply text-4xl;
     }
     h3{
-        @apply text-6xl uppercase;
+        @apply text-4xl md:text-5xl font-bold;
     }
     h4{
-        @apply text-4xl;
+        @apply text-xl font-bold;
     }
     h5{
         @apply text-3xl;
@@ -75,7 +75,6 @@ body{
     }
     header, .mobile-menu{
         i{
-            @apply text-lg;
             line-height: 0;
         }
         a{
@@ -117,7 +116,7 @@ body{
         }
     
         .openbtn span {
-            @apply w-1/2 h-[3px] relative left-[12px] bg-blue dark:bg-white rounded inline ;
+            @apply w-1/2 h-[3px] relative left-[12px] bg-white dark:bg-white rounded inline ;
             transition: all .4s;
         }
     

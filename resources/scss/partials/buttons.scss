@@ -31,5 +31,8 @@
 
 // Urgencias
 .btn-urgencies{
-    @apply flex gap-4 items-center justify-center rounded-3xl	 py-6 bg-blue text-white;
+    @apply flex gap-4 items-center justify-center rounded-3xl p-6 bg-blue text-white;
+    i{
+        line-height: 0;
+    }
 }
