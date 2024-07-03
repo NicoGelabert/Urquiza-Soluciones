@@ -16,58 +16,61 @@
         class="block fixed z-10 top-0 bottom-0 height h-full w-full transition-all mobile-menu md:hidden p-4"
         :class="mobileMenuOpen ? 'left-0' : 'left-full'"
     >
-        <div class="flex flex-col justify-between items-center h-full py-12">
-            <div class=" flex flex-col gap-8">
-                <div class="logo-hamburguer">
-                    <x-application-logo/>
-                </div>
-                <ul class="flex flex-col gap-y-4 items-center">
-                    <li x-data="{open: false}" class="relative">
-                        <a
-                            @click="open = !open"
-                            
-                            class="cursor-pointer flex items-center gap-4"
-                        >
-                        {{ __('Servicios') }}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"
-                            />
-                        </svg>
-                        </a>
-                        <ul
-                            @click.outside="open = false"
-                            x-show="open"
-                            x-transition
-                            x-cloak
-                            class="flex flex-col gap-2 py-4"
-                        >
-                            @foreach ($services as $service)
-                                <li>
-                                    <a href="{{ route('service.view', $service->slug) }}">
-                                        <span class="text-xs">{{ $service->name }}</span>
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </li>
-                </ul>
+        <div class="flex flex-col justify-between items-center h-full py-12 gap-8">
+            <div class="logo-hamburguer">
+                <x-application-logo/>
             </div>
-            <div class="flex justify-center gap-4 social-icons">
-                <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+            <ul class="w-3/4 flex flex-col gap-y-12">
+                <li class="relative text-3xl font-bold">
+                    <div class="flex gap-4 items-center">
+                        <i class="fi fi-rr-tools"></i>
+                        {{ __('Servicios') }}
+                    </div>
+                    <ul
+                        class="flex flex-col gap-2 py-4 ml-12"
+                    >
+                        @foreach ($services as $service)
+                            <li>
+                                <a href="{{ route('service.view', $service->slug) }}">
+                                    <span class="text-2xl font-normal">{{ $service->name }}</span>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="relative text-3xl font-bold">
+                    <a href="#">
+                        <div class="flex gap-4 items-center">
+                            <i class="fi fi-rr-user-helmet-safety"></i>
+                            {{ __('Sobre Nosotros') }}
+                        </div>
+                    </a>
+                </li>
+                <li class="relative text-3xl font-bold">
+                    <a href="#">
+                        <div class="flex gap-4 items-center">
+                            <i class="fi fi-rr-envelope-dot"></i>
+                            {{ __('Contacto') }}
+                        </div>
+                    </a>
+                </li>
+                <li class="relative text-3xl font-bold">
+                    <a href="#">
+                        <div class="btn-urgencies">
+                        <i class="fi fi-rr-phone-call"></i>
+                            {{ __('Urgencias') }}
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="flex justify-center gap-4 social-icons text-blue">
+                <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
-                <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+                <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-instagram"></i>
                 </a>
-                <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+                <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-rs-map-marker"></i>
                 </a>
             </div>
@@ -75,16 +78,16 @@
     </div>
     <!--/ Responsive Menu -->
 
-    <nav class="hidden md:flex w-full max-w-screen-xl mx-12 justify-between items-center">
+    <nav class="hidden md:flex w-full max-w-screen-xl mx-4 justify-between items-center">
         <div class="logo flex justify-center">
             <x-application-logo/>
         </div>
-        <ul class="grid grid-flow-col items-center justify-end gap-4">
+        <ul class="grid grid-flow-col items-center justify-end gap-2 lg:gap-4">
             <!-- Idiomas -->
             <li x-data="{open: false}" class="relative h-full">
                 <a
                     @click="open = !open"
-                    class="cursor-pointer flex items-center px-navbar-item pr-5 h-full"
+                    class="cursor-pointer flex items-center px-navbar-item h-full"
                     :class="{'w-full': open}"
                 >
                     <span class="flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
@@ -123,7 +126,7 @@
             </li>
 
             <!-- Tema -->
-            <li>
+            <!-- <li>
                 <div class="relative flex gap-2 items-center">
                     <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                         <div class="flex justify-between w-full px-1 pt-px">
@@ -134,7 +137,7 @@
                         <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
                     </button>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Servicios -->
             <li x-data="{open: false}" class="relative">
@@ -143,6 +146,7 @@
                     :class="{'w-full': open}"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
+                <i class="fi fi-rr-tools pr-2"></i>
                 {{ __('Servicios') }}
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,6 +176,24 @@
                         </li>
                     @endforeach
                 </ul>
+            </li>
+            <!-- Sobre Nosotros -->
+            <li class="relative">
+                <a
+                    class="cursor-pointer flex items-center px-navbar-item w-max"
+                >
+                    <i class="fi fi-rr-user-helmet-safety pr-2"></i>
+                    {{ __('Sobre Nosotros') }}
+                </a>
+            </li>
+            <!-- Contacto -->
+            <li class="relative">
+                <a
+                    class="cursor-pointer flex items-center px-navbar-item w-max"
+                >
+                    <i class="fi fi-rr-envelope-dot pr-2"></i>
+                    {{ __('Contacto') }}
+                </a>
             </li>
             <li>
                 <div class="flex justify-center gap-4 social-icons">

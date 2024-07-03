@@ -43,7 +43,7 @@ body{
     // }
     .logo-hamburguer{
         svg{
-            @apply w-36 h-auto fill-blue dark:fill-white;
+            @apply h-auto fill-blue dark:fill-white;
         }
     }
     .toast{
@@ -69,8 +69,15 @@ body{
     }
     .mobile-menu{
         @apply bg-white text-blue dark:bg-blue dark:text-white;
+        i{
+            @apply text-3xl;
+        }
     }
     header, .mobile-menu{
+        i{
+            @apply text-lg;
+            line-height: 0;
+        }
         a{
             @apply hover:bg-primary focus:bg-primary active:bg-primary hover:text-blue focus:text-blue active:text-blue dark:hover:bg-neutral-900 dark:focus:bg-neutral-900 dark:active:bg-neutral-900;
         }

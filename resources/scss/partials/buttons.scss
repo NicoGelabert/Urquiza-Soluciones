@@ -27,4 +27,9 @@
 .btn-secondary span{
     transition: padding-right 0.3s;
 }
-// Fin Botón Primario con Animación 
+// Fin Botón Secundario con Animación 
+
+// Urgencias
+.btn-urgencies{
+    @apply flex gap-4 items-center justify-center rounded-3xl	 py-6 bg-blue text-white;
+}

@@ -1,6 +1,6 @@
 header{
     nav ul li a{
-        @apply py-6 transition-all;        
+        @apply py-6 transition-all text-sm lg:text-base;
     }
 }
 .scrolled-bottom{
