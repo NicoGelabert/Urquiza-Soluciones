@@ -11,12 +11,16 @@
     <x-features :features="$features"/>
         
     <hr class="divider" />
-    
-    <x-portfolio :projects="$projects" />
-    
-    <x-clients :clients="$clients" />
+
+    <x-coverage />
     
     <hr class="divider" />
+    
+    <!-- <x-portfolio :projects="$projects" /> -->
+    
+    <!-- <x-clients :clients="$clients" /> -->
+    
+    <!-- <hr class="divider" /> -->
     
     <x-faq :faqs="$faqs"/>
     

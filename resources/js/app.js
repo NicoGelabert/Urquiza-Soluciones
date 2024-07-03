@@ -116,32 +116,6 @@ toggleThemeButton.addEventListener('click', function() {
 
 // SPLIDE
 document.addEventListener( 'DOMContentLoaded', function () {
-  // Portfolio
-var main = new Splide( '#main-carousel', {
-  type      : 'fade',
-  rewind    : true,
-  pagination: false,
-  arrows    : false,
-  fixedWidth  : '100%',
-  fixedHeight : '100vh',
-});
-
-var thumbnails = new Splide( '#thumbnail-carousel', {
-  type        : 'loop',
-  gap         : 10,
-  rewind      : true,
-  pagination  : false,
-  isNavigation: true,
-  focus       : 'center',
-  fixedWidth  : '100%',
-  fixedHeight : '100vh',
-});
-
-main.sync( thumbnails );
-main.mount();
-thumbnails.mount();
-// Fin Portfolio
-
   // Home Hero Banner
   var homeHeroBanner = new Splide('.home-hero-banner', {
       type        : 'fade',
