@@ -2,10 +2,10 @@
 
     <x-home-hero-banner :homeherobanners="$homeherobanners" />
 
+    
     <x-services :services="$services"/>
     
-    <!-- <hr class="divider" /> -->
-    
+    <hr class="divider" />
     <!-- <x-benefits /> -->
     
     <x-features :features="$features"/>

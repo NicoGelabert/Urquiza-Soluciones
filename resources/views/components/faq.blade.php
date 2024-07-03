@@ -1,12 +1,7 @@
 <div class="container" id="faqs">
-    <div class="flex flex-col md:flex-row w-full justify-between gap-16">
-        <div class="flex justify-between md:hidden">
-            <div class="">
-                <h3 class="text-center">Faq's</h3>
-            </div>
-            <i class="fi fi-br-arrow-up-left -rotate-90 text-4xl overflow-hidden"></i>
-        </div>
-        <div class="w-full md:w-10/12 questions">
+    <div class="flex flex-col w-full justify-between gap-8">
+        <h3 class="text-center">Faq's</h3>
+        <div class="w-full questions">
             @foreach ($faqs as $faq)
                 <div class="border rounded-xl pt-4 px-4 question" x-data="{expanded: false}">
                     <div class="flex w-full justify-between items-baseline">
@@ -33,16 +28,6 @@
                 </div>
             @endforeach
         </div>
-        <div class="hidden md:flex flex-col justify-between">
-            <div class="h-fit vertical-text ">
-                <h3 class="text-center">Faq's</h3>
-            </div>
-            <i class="fi fi-br-arrow-up-left text-4xl overflow-hidden"></i>
-        </div>
-    </div>
-    <div class="flex justify-end mt-8">
-        <p class="text-right text-2xl">Algunas de las preguntas
-        <br>que recibimos.</p>
     </div>
 </div>
 <!-- <div class="container flex flex-col gap-8 items-center">

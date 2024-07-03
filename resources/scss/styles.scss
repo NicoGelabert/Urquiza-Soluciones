@@ -89,9 +89,9 @@ body{
                 }
             }
             li:hover{
-                @apply bg-gray-200;
+                @apply bg-primary;
                 a{
-                    @apply text-primary;
+                    @apply text-blue bg-primary;
                 }
             }
         }
@@ -143,11 +143,11 @@ body{
         }
     // Contenedor gral
     .container{
-        @apply w-full max-w-screen-xl mx-auto py-8 md:py-0 px-4 border-x-2 2xl:px-0;
+        @apply w-full max-w-screen-xl mx-auto px-4 border-x-2 2xl:px-0;
     }
     // línea divisoria
     .divider{ 
-        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-30 dark:via-white my-16;
+        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-0 dark:via-white my-16;
     }
     // Social icons
     .social-icons{

@@ -83,6 +83,16 @@ export default {
     limit: null,
     total: null
   },
+  faqs: {
+    loading: false,
+    data: [],
+    links: [],
+    from: null,
+    to: null,
+    page: 1,
+    limit: null,
+    total: null
+  },
   tags: {
     loading: false,
     data: [],

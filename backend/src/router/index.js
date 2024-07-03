@@ -15,6 +15,7 @@ import Services from "../views/Services/Services.vue";
 import Projects from "../views/Projects/Projects.vue";
 import ProjectView from "../views/Projects/ProjectView.vue";
 import Features from "../views/Features/Features.vue";
+import Faqs from "../views/Faqs/Faqs.vue";
 import Tags from "../views/Tags/Tags.vue";
 import Clients from "../views/Clients/Clients.vue";
 import Users from "../views/Users/Users.vue";
@@ -106,6 +107,11 @@ const routes = [
         path: 'features',
         name: 'app.features',
         component: Features
+      },
+      {
+        path: 'faqs',
+        name: 'app.faqs',
+        component: Faqs
       },
       {
         path: 'tags',
