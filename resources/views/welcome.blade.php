@@ -5,14 +5,14 @@
     
     <x-services :services="$services"/>
     
-    <hr class="divider" />
+    <hr class="divider" id="about"/>
     <!-- <x-benefits /> -->
     
     <x-features :features="$features"/>
         
-    <hr class="divider" />
+    <hr class="divider" id="zona-de-cobertura" />
 
-    <x-coverage />
+    <x-coverage/>
     
     <hr class="divider" />
     
@@ -24,8 +24,10 @@
     
     <x-faq :faqs="$faqs"/>
     
-    <hr class="divider" />
+    <hr class="divider" id="contact"/>
 
     <x-contact />
+
+    <hr class="divider"/>
     
 </x-app-layout>

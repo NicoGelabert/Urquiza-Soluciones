@@ -229,8 +229,8 @@ function deleteFaq(faq){
     })
 }
 
-function editFaq(h){
-    emit('clickEdit', h)
+function editFaq(f){
+    emit('clickEdit', f)
 }
 
 </script>

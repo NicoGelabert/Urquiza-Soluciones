@@ -3,7 +3,7 @@
         <h3 class="text-center">Faq's</h3>
         <div class="w-full questions">
             @foreach ($faqs as $faq)
-                <div class="border rounded-xl pt-4 px-4 question" x-data="{expanded: false}">
+                <div class="border rounded-xl py-4 px-4 question" x-data="{expanded: false}">
                     <div class="flex w-full justify-between items-baseline">
                         <p class="small-text subtitle">{{ $faq -> question}}</p>
                         <p class="text-right">
@@ -21,9 +21,9 @@
                     <div
                         x-show="expanded"
                         x-collapse.min.0
-                        class="text-gray-500 wysiwyg-content pt-4"
+                        class="text-gray-500 wysiwyg-content"
                     >
-                        <p class="small-text font-light">{{ $faq -> answer}}</p>
+                        <p class="small-text font-light pt-4">{{ $faq -> answer}}</p>
                     </div>
                 </div>
             @endforeach

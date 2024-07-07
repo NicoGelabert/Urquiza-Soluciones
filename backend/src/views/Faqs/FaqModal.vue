@@ -19,7 +19,7 @@
                             <Spinner v-if="loading" class="absolute left-0 top-0 bg-white right-0 bottom-0 flex items-center justify-center"/>
                             <header class="py-3 px-4 flex justify-between items-center">
                                 <DialogTitle as="h3" class="text-lg leading-6 font-medium text-gray-900">
-                                    {{ faq.id ? `Update image: "${props.faq.headline}"` : 'Create new image' }}
+                                    {{ faq.id ? `Update faq: "${props.faq.question}"` : 'Create new faq' }}
                                 </DialogTitle>
                                 <button
                                     @click="closeModal()"

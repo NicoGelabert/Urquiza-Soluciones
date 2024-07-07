@@ -38,8 +38,8 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="relative text-3xl font-bold">
-                    <a href="#">
+                <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
+                    <a href="#about">
                         <div class="flex gap-4 items-center">
                             <i class="fi fi-rr-user-helmet-safety"></i>
                             {{ __('Sobre Nosotros') }}
@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li class="relative text-3xl font-bold">
-                    <a href="#">
+                    <a href="#contact">
                         <div class="flex gap-4 items-center">
                             <i class="fi fi-rr-envelope-dot"></i>
                             {{ __('Contacto') }}
@@ -70,7 +70,7 @@
                 <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-instagram"></i>
                 </a>
-                <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-10 w-10 aspect-square " target="_blank">
+                <a href="#zona-de-cobertura" class="h-10 w-10 aspect-square">
                     <i class="flex text-2xl leading-none fi fi-rs-map-marker"></i>
                 </a>
             </div>
@@ -179,7 +179,7 @@
             </li>
             <!-- Sobre Nosotros -->
             <li class="relative">
-                <a
+                <a href="#about"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                     <i class="fi fi-rr-user-helmet-safety pr-2"></i>
@@ -203,7 +203,7 @@
                     <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-instagram"></i>
                     </a>
-                    <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
+                    <a href="#zona-de-cobertura" class="h-6 w-6 aspect-square rounded-md p-2">
                         <i class="flex text-base leading-none fi fi-rs-map-marker"></i>
                     </a>
                 </div>

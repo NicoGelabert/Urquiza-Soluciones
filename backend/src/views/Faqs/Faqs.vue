@@ -36,8 +36,8 @@ function showAddNewModal(){
     showFaqModal.value = true
 }
 
-function editFaq(h){
-    store.dispatch('getFaq', h.id)
+function editFaq(f){
+    store.dispatch('getFaq', f.id)
     .then(({data}) => {
         faqModel.value = data
         showAddNewModal(); 
