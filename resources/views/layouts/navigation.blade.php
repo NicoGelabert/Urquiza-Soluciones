@@ -80,7 +80,7 @@
                 </li>
             </ul>
             <div class="flex justify-center gap-4 social-icons text-blue">
-                <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square " target="_blank">
+                <a href="https://wa.me/34615338966" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
                 <a href="https://www.instagram.com/urquizasoluciones/?hl=es-es" class="h-10 w-10 aspect-square " target="_blank">
@@ -214,7 +214,7 @@
             </li>
             <li>
                 <div class="flex justify-center gap-4 social-icons">
-                    <a href="https://wa.me/34622406965" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
+                    <a href="https://wa.me/34615338966" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>
                     </a>
                     <a href="https://www.instagram.com/urquizasoluciones/?hl=es-es" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
