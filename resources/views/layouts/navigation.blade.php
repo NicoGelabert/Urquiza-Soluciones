@@ -205,7 +205,7 @@
             </li>
             <!-- Contacto -->
             <li class="relative">
-                <a
+                <a href="#contact"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
                 >
                     <i class="fi fi-rr-envelope-dot pr-2"></i>
