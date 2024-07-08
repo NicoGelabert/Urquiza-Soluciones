@@ -2,7 +2,21 @@
     x-data="{
         mobileMenuOpen: false,
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
+        toggleMobileMenu() {
+            this.mobileMenuOpen = !this.mobileMenuOpen;
+        },
+        updateButtonState() {
+            const buttons = document.querySelectorAll('.openbtn');
+            buttons.forEach(btn => {
+                if (this.mobileMenuOpen) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
     }"
+    x-effect="updateButtonState()"
     @cart-change.window="cartItemsCount = $event.detail.count"
     class="flex justify-between md:justify-center z-10 w-full py-4 md:py-0"
     id="navbar"
@@ -21,22 +35,24 @@
                 <x-application-logo/>
             </div>
             <ul class="w-3/4 flex flex-col gap-y-12">
-                <li class="relative text-3xl font-bold">
-                    <div class="flex gap-4 items-center">
-                        <i class="fi fi-rr-tools"></i>
-                        {{ __('Servicios') }}
-                    </div>
-                    <ul
+                <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
+                    <a href="#servicios">
+                        <div class="flex gap-4 items-center">
+                            <i class="fi fi-rr-tools"></i>
+                            {{ __('Servicios') }}
+                        </div>
+                    </a>
+                    <!-- <ul
                         class="flex flex-col gap-2 py-4 ml-12"
                     >
                         @foreach ($services as $service)
                             <li>
                                 <a href="{{ route('service.view', $service->slug) }}">
-                                    <span class="text-2xl font-normal">{{ $service->name }}</span>
+                                    <span class="text-2xl font-normal">{{ __($service->name) }}</span>
                                 </a>
                             </li>
                         @endforeach
-                    </ul>
+                    </ul> -->
                 </li>
                 <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
                     <a href="#about">
@@ -46,7 +62,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="relative text-3xl font-bold">
+                <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
                     <a href="#contact">
                         <div class="flex gap-4 items-center">
                             <i class="fi fi-rr-envelope-dot"></i>
@@ -55,7 +71,7 @@
                     </a>
                 </li>
                 <li class="relative text-3xl font-bold">
-                    <a href="#">
+                    <a href="tel:+34615338966">
                         <div class="btn-urgencies">
                         <i class="fi fi-rr-phone-call"></i>
                             {{ __('Urgencias') }}
@@ -141,14 +157,15 @@
 
             <!-- Servicios -->
             <li x-data="{open: false}" class="relative">
-                <a
+                <!-- <a
                     @click="open = !open"
                     :class="{'w-full': open}"
                     class="cursor-pointer flex items-center px-navbar-item w-max"
-                >
+                > -->
+                <a href="#servicios" class="cursor-pointer flex items-center px-navbar-item w-max">
                 <i class="fi fi-rr-tools pr-2"></i>
                 {{ __('Servicios') }}
-                <svg
+                <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
                     viewBox="0 0 20 20"
@@ -159,9 +176,9 @@
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                         clip-rule="evenodd"
                     />
-                </svg>
+                </svg> -->
                 </a>
-                <ul
+                <!-- <ul
                     @click.outside="open = false"
                     x-show="open"
                     x-transition
@@ -171,11 +188,11 @@
                     @foreach ($services as $service)
                         <li class="py-lang-navbar-item" >
                             <a href="{{ route('service.view', $service->slug) }}">
-                                <span class="text-xs">{{ $service->name }}</span>
+                                <span class="text-xs">{{ __($service->name) }}</span>
                             </a>
                         </li>
                     @endforeach
-                </ul>
+                </ul> -->
             </li>
             <!-- Sobre Nosotros -->
             <li class="relative">
@@ -252,7 +269,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="relative flex gap-2 items-center">
+        <!-- <div class="relative flex gap-2 items-center">
             <button id="toggle-theme" class="relative inline-flex items-center h-6 rounded-full w-12 transition-colors bg-gray-200 dark:bg-gray-600 focus:outline-none">
                 <div class="flex justify-between w-full px-1 pt-px">
                     <i class="fi fi-rr-sun text-transparent dark:text-white"></i>
@@ -261,7 +278,7 @@
                 <span class="sr-only">Toggle theme</span>
                 <span class="indicator absolute left-0 inline-block w-5 h-5 bg-white rounded-full shadow-sm transition-transform"></span>
             </button>
-        </div>
+        </div> -->
         <x-hamburguer />
     </div>
 </header>

@@ -36,3 +36,33 @@
         line-height: 0;
     }
 }
+
+footer .btn-urgencies{
+    @apply py-4 px-6 bg-primary text-blue;
+}
+
+// Btn services
+#btnService{
+    .service-button{
+        @apply w-full border border-blue/10 py-4 px-8 rounded-2xl flex items-center justify-between;
+        .service-icon{
+            @apply text-xl mr-4;
+            line-height: 0;
+        }
+        i{
+            line-height: 0;
+        }
+        .service-bg-arrow{
+            @apply flex items-center justify-center w-6 h-6 bg-blue/10 text-blue rounded-full;
+        }
+    }
+}
+#btnService .splide__track--nav>.splide__list>.splide__slide.is-active{
+    @apply border-none;
+    .service-button{
+        @apply bg-gradient-to-b from-blue to-secondary_blue text-white;
+        .service-bg-arrow{
+            @apply bg-primary;
+        }
+    }
+}

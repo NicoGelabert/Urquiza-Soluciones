@@ -28,28 +28,6 @@
 }
 #services{
     @apply my-16;
-    .service-button{
-        @apply w-full border border-blue/10 py-4 px-8 rounded-2xl flex items-center justify-between;
-        .service-icon{
-            @apply text-xl mr-4;
-            line-height: 0;
-        }
-        i{
-            line-height: 0;
-        }
-        .service-bg-arrow{
-            @apply flex items-center justify-center w-6 h-6 bg-blue/10 text-blue rounded-full;
-        }
-    }
-    .service-button-active{
-        @apply bg-gradient-to-b from-blue to-secondary_blue text-white;
-        .service-bg-arrow{
-            @apply bg-primary;
-        }
-    }
-    .service-description{
-        @apply bg-slate-100 rounded-3xl;
-    }
 }
 //Cobertura
 .cobertura{

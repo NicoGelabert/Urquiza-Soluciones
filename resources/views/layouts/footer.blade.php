@@ -5,45 +5,25 @@
                 <x-application-logo />
                 <x-social-icons />
             </div>
-            <p class="">Fuengirola, Málaga.</p>
+            <p class="">Málaga, Costa del Sol.</p>
         </div>
         <div class="footer-menu">
             <div>
-                <h6>{{ __('My account') }}</h6>
-                <ul>
-                    <li>
-                        <a href="{{ route('register') }}">
-                            {{ __('Login') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('register') }}">
-                            {{ __('Register now') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('password.request') }}">
-                            {{ __('Forgot password?') }}
-                        </a>
-                    </li>
-                </ul>
+                <h6>{{ __('Servicios') }}</h6>
             </div>
             <div>
-                <h6>{{ __('The company') }}</h6>
-                <ul>
-                    <li><a href="#">{{ __('About us') }}</a></li>
-                    <li><a href="#">{{ __('Work with us') }}</a></li>
-                    <li><a href="#">{{ __('Terms & conditions') }}</a></li>
-                    <li><a href="#">{{ __('Privacy policy') }}</a></li>
-                </ul>
+                <h6>{{ __('Sobre Nosotros') }}</h6>
             </div>
             <div>
-                <h6>{{ __('Help') }}</h6>
-                <ul>
-                    <li><a href="#">{{ __('Support') }}</a></li>
-                    <li><a href="#">{{ __('Faq') }}</a></li>
-                    <li><a href="#">{{ __('Contact us') }}</a></li>
-                </ul>
+                <h6>{{ __('Contacto') }}</h6>
+            </div>
+            <div>
+                <a href="tel:+34615338966">
+                    <div class="btn-urgencies">
+                    <i class="fi fi-rr-phone-call"></i>
+                        <h6>{{ __('Urgencias') }}</h6>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

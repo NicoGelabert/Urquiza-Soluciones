@@ -1,8 +1,8 @@
 <div class="container mb-16 flex flex-col md:flex-row items-start gap-16" id="contact">
     <div class="w-full flex flex-col md:w-1/2 gap-8">
-        <h3 class="text-left">Contacto</h3>
+        <h3 class="text-left">{{ __('Contacto')}}</h3>
         <div class="flex flex-col justify-between items-start gap-8">
-            <p class="text-lg leading-8 text-gray-500">Si tiene más consultas, no dude en ponerse en contacto con nosotros. </p>
+            <p class="text-lg leading-8 text-gray-500">{{ __('Si tiene más consultas, no dude en ponerse en contacto con nosotros.') }}</p>
             <x-social-icons />
         </div>
     </div>
@@ -10,11 +10,11 @@
         <form id="contactForm" action="{{ route('contact.store') }}" method="post" class="flex gap-2 w-full form">
         @csrf
             <div class="flex flex-col gap-6 w-full">
-                <input id="nameInput" type="text" name="name" placeholder="Su nombre" required class="account w-full">
-                <input id="emailInput" type="email" name="email" placeholder="Su correo electrónico" required class="account w-full">
-                <input id="phoneInput" type="tel" name="phone" placeholder="Su teléfono" required class="account w-full" pattern="[0-9]{9}">
+                <input id="nameInput" type="text" name="name" placeholder="{{ __('Su nombre') }}" required class="account w-full">
+                <input id="emailInput" type="email" name="email" placeholder="{{ __('Su correo electrónico') }}" required class="account w-full">
+                <input id="phoneInput" type="tel" name="phone" placeholder="{{ __('Su teléfono') }}" required class="account w-full" pattern="[0-9]{9}">
                 <select name="area" required id="areaInput">
-                    <option value="">Zona del trabajo</option>
+                    <option value="">{{ __('Zona del trabajo') }}</option>
                     <option value="Málaga">Málaga</option>
                     <option value="Torremolinos">Torremolinos</option>
                     <option value="Benalmádena">Benalmádena</option>
@@ -24,17 +24,17 @@
                     <option value="Calahonda">Calahonda</option>
                     <option value="Marbella">Marbella</option>
                 </select>
-                <textarea id="messageInput" name="message" placeholder="Déjenos un mensaje" rows="4" required class="account w-full"></textarea>
+                <textarea id="messageInput" name="message" placeholder="{{__('Déjenos un mensaje') }}" rows="4" required class="account w-full"></textarea>
                 <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
         </form>
         <div id="successMessage" class="mx-auto" style="display: none;">
-            <H4 class="text-center">Mensaje Enviado!</H4>
+            <H4 class="text-center">{{ __('Mensaje Enviado!') }}</H4>
             <img src="{{ asset('storage/img/mensaje-enviado.gif')}}" alt="Mensaje enviado">
         </div>
         <div id="errorMessage" class="mx-auto" style="display: none;">
-            El envío falló. Vuelva a intentar, por favor.
+        {{ __('El envío falló. Vuelva a intentar, por favor.') }}
         </div>
     </div>
 </div>

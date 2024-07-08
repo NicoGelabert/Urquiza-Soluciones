@@ -1,21 +1,21 @@
 <div class="container flex flex-col gap-8">
-    <h3 class="text-center">Nuestros servicios incluyen</h3>
-    <div class="flex flex-col md:flex-row">
+    <h3 class="text-center">{{ __('Nuestros servicios incluyen') }}</h3>
+    <div class="flex flex-col md:flex-row gap-16 ">
         <div class="w-full md:w-1/2 flex flex-col pt-12 gap-8">
             @foreach ($features as $feature)
                 <div class="w-full flex items-start gap-4">
                     <img src="{{ $feature->image }}" alt="{{ $feature->title }}" class="max-w-5 pt-2">
                     <div class="flex flex-col gap-4">
-                        <h4 class="">{{ $feature->title }}</h4>
-                        <p class="text-slate-400">{{ $feature->description }}</p>
+                        <h4 class="">{{ __($feature->title) }}</h4>
+                        <p class="text-slate-400">{{ __($feature->description) }}</p>
                     </div>
                 </div>
             @endforeach
         </div>
         <div class="w-full md:w-1/2 flex flex-col pt-12 gap-8 items-center">
-            <h4 class="uppercase text-center">¿Tiene una urgencia? Contáctenos.</h4>
+            <h4 class="uppercase text-center">{{ __('¿Tiene una urgencia? Contáctenos.') }}</h4>
             <div class="flex text-2xl font-bold">
-                <a href="#">
+                <a href="tel:+34615338966">
                     <div class="btn-urgencies">
                     <i class="fi fi-rr-phone-call"></i>
                         {{ __('Urgencias') }}

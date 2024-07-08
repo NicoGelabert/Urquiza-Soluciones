@@ -5,8 +5,8 @@
         </div>
         <div class="cobText w-full lg:w-1/2 flex flex-col gap-x-4 gap-y-6">
             <h3 class="font-bold text-left">{{__('Estamos en Málaga!')}}</h3>
-            <p class="mt-4 text-lg leading-8 text-gray-500">Bienvenido a Urquiza Soluciones, somos una empresa que entiende la importancia de contar con sistemas de climatización eficientes, instalaciones eléctricas seguras y sistemas de fontanería confiables en su hogar o negocio. Por eso, nos enorgullece ofrecer servicios de primera calidad que garantizan su comodidad y tranquilidad en todo momento.
-            <br><br><strong>Nuestra zona de acción comprende la Costa del Sol desde Málaga hasta Marbella.</strong>
+            <p class="mt-4 text-lg leading-8 text-gray-500">{{ __('Bienvenido a Urquiza Soluciones, somos una empresa que entiende la importancia de contar con sistemas de climatización eficientes, instalaciones eléctricas seguras y sistemas de fontanería confiables en su hogar o negocio. Por eso, nos enorgullece ofrecer servicios de primera calidad que garantizan su comodidad y tranquilidad en todo momento.')}}
+            <br><br><strong>{{ __('Nuestra zona de acción comprende la Costa del Sol desde Málaga hasta Marbella.') }}</strong>
             </p>
         </div>
     </div>

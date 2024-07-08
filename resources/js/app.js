@@ -103,16 +103,17 @@ document.addEventListener("alpine:init", async () => {
 });
 
 Alpine.start();
+// dark mode
+// document.getElementById('toggle-theme').addEventListener('click', function() {
+//   document.documentElement.classList.toggle('dark');
+// });
 
-document.getElementById('toggle-theme').addEventListener('click', function() {
-  document.documentElement.classList.toggle('dark');
-});
+// const toggleThemeButton = document.getElementById('toggle-theme');
 
-const toggleThemeButton = document.getElementById('toggle-theme');
-
-toggleThemeButton.addEventListener('click', function() {
-    toggleThemeButton.classList.toggle('dark');
-});
+// toggleThemeButton.addEventListener('click', function() {
+//     toggleThemeButton.classList.toggle('dark');
+// });
+// dark mode
 
 // SPLIDE
 document.addEventListener( 'DOMContentLoaded', function () {
@@ -167,29 +168,39 @@ document.addEventListener( 'DOMContentLoaded', function () {
       element.classList.remove('active');
     });
   }
+});
   // Fin Home Hero Banner
   // Services home
-  var homeServices = new Splide('#home-services', {
-    perPage   : 3,
-    gap       : '2rem',
-    arrows    : false,
-    breakpoints: {
-      1024:{
-        perPage:2,
-        type   :'loop',
-      },
-      640: {
-        perPage: 1,
-      },
-      480: {
-        perPage: 1,
+  document.addEventListener( 'DOMContentLoaded', function () {
+  var servicesAttributes = new Splide( '#servicesAttributes', {
+    type       : 'fade',
+    heightRatio: 0.5,
+    pagination : false,
+    arrows     : false,
+    cover      : true,
+    breakpoints     : {
+      480 : {
+        fixedHeight: '100%',
       },
     }
+  } );
+  
+  var btnService = new Splide( '#btnService', {
+    rewind          : true,
+    isNavigation    : true,
+    gap             : 10,
+    focus           : 'center',
+    pagination      : false,
+    arrows          : false,
+    cover           : true,
   });
-  homeServices.mount();
+  
+  servicesAttributes.sync( btnService );
+  servicesAttributes.mount();
+  btnService.mount();
+});
 // Fin Services Home
   
-});
 
 // Service galery
 if (document.querySelector('#service_gallery')) {

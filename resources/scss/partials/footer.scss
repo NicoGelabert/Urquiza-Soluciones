@@ -12,7 +12,7 @@ footer{
             }
         }
         .footer-menu{
-            @apply flex flex-col gap-4 text-center md:flex-row md:gap-8 md:text-left;
+            @apply flex flex-col gap-4 text-center md:flex-row md:gap-8 md:text-left md:items-center;
             a{
                 @apply text-sm;
             }

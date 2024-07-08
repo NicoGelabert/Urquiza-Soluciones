@@ -12,12 +12,10 @@ class ServiceController extends Controller
 {
     public function index()
     {
+        // $services = Service::with('attributes')->get();
+        // return response()->json($services);
         $services = Service::with('attributes')->get();
-        return response()->json($services);
-        // $services = Service::all();
-        // return view('services.index', [
-        //     'services' => $services
-        // ]);
+        return view('services', compact('services'));
     }
 
     public function view(Service $service)
