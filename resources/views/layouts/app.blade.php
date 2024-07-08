@@ -12,6 +12,9 @@
 
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/img/icono_urquiza_soluciones.ico') }}">
 
+        <!-- reCaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
