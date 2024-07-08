@@ -83,7 +83,7 @@
                 <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
-                <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square " target="_blank">
+                <a href="https://www.instagram.com/urquizasoluciones/?hl=es-es" class="h-10 w-10 aspect-square " target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-instagram"></i>
                 </a>
                 <a href="#zona-de-cobertura" class="h-10 w-10 aspect-square">
@@ -217,7 +217,7 @@
                     <a href="https://wa.me/34622406965" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-whatsapp"></i>
                     </a>
-                    <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
+                    <a href="https://www.instagram.com/urquizasoluciones/?hl=es-es" class="h-6 w-6 aspect-square rounded-md p-2" target="_blank">
                         <i class="flex text-base leading-none fi fi-brands-instagram"></i>
                     </a>
                     <a href="#zona-de-cobertura" class="h-6 w-6 aspect-square rounded-md p-2">

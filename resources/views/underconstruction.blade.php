@@ -7,7 +7,7 @@
 
         <title inertia>{{ config('app.name', 'Punto Sur Pastelería') }}</title>
 
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/img/puntosur.ico') }}">
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/img/icono_urquiza_soluciones.ico') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,7 +30,7 @@
                 <a href="https://wa.me/34622406965" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-whatsapp"></i>
                 </a>
-                <a href="https://www.instagram.com/puntosurfuengirola/?hl=es" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
+                <a href="https://www.instagram.com/urquizasoluciones/?hl=es-es" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
                     <i class="flex text-2xl leading-none fi fi-brands-instagram"></i>
                 </a>
                 <a href="https://maps.app.goo.gl/22GUnZ2foJeEYud98" class="h-10 w-10 aspect-square rounded-md bg-blue/5 p-2 ring-1 ring-blue/10" target="_blank">
