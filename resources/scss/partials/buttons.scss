@@ -2,11 +2,11 @@
 
 // Botón Primario con Animación 
 .btn-primary{
-    @apply w-fit relative px-4 py-2 text-sm uppercase rounded-full bg-primary text-blue hover:bg-blue hover:text-white hover:border-primary transition-all;
+    @apply w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-primary text-blue hover:bg-blue hover:text-white hover:border-primary transition-all;
     font-family: $primary-font;
 }
 .btn-secondary{
-    @apply w-fit relative px-4 py-2 text-sm uppercase rounded-full bg-transparent text-white hover:bg-blue hover:text-white hover:border-primary transition-all;
+    @apply w-fit relative px-4 py-2 text-xxs md:text-sm font-bold uppercase rounded-full bg-transparent text-white hover:bg-blue hover:text-white hover:border-primary transition-all;
     font-family: $primary-font;
     i{
         @apply absolute right-0 top-1/2 text-transparent;
