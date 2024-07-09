@@ -25,7 +25,7 @@
                     <option value="Marbella">Marbella</option>
                 </select>
                 <textarea id="messageInput" name="message" placeholder="{{__('Déjenos un mensaje') }}" rows="4" required class="account w-full"></textarea>
-                <!-- <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div> -->
+                <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div>
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
         </form>
