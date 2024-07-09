@@ -25,7 +25,7 @@
                     <option value="Marbella">Marbella</option>
                 </select>
                 <textarea id="messageInput" name="message" placeholder="{{__('Déjenos un mensaje') }}" rows="4" required class="account w-full"></textarea>
-                <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div>
+                <!-- <div class="g-recaptcha" data-sitekey="6LcjHtMpAAAAAII4PAM3Vh2hT-0RDntu6B-3a_pH"></div> -->
                 <x-button id="subscribeBtn" type="submit">{{__('Enviar')}}</x-button>
             </div>
         </form>
@@ -53,8 +53,6 @@
             const phone = document.getElementById('phoneInput').value;
             const area = document.getElementById('areaInput').value;
             const message = document.getElementById('messageInput').value;
-            console.log(typeof name)
-            console.log(typeof area)
             try {
                 const response = await fetch('{{ route("contact.store") }}', {
                     method: 'POST',

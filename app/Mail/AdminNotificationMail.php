@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactConfirmation extends Mailable
+class AdminNotificationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -26,7 +26,7 @@ class ContactConfirmation extends Mailable
 
     public function build()
     {
-        return $this->view('emails.contact_confirmation')
-                    ->subject('Contacto Recibido');
+        return $this->view('emails.admin_contact')
+                    ->subject('Nuevo Contacto');
     }
 }

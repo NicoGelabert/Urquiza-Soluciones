@@ -7,6 +7,7 @@ use App\Events\ContactCreated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactConfirmation;
+use App\Mail\AdminNotificationMail;
 
 class ContactController extends Controller
 {
@@ -37,6 +38,7 @@ class ContactController extends Controller
         try {
             // Send confirmation email to the subscriber
             Mail::to($contact->email)->send(new ContactConfirmation($contact));
+            Mail::to(config('mail.from.address'))->send(new AdminNotificationMail($contact));
 
             return response()->json(['message' => 'Mensaje Enviado!'], 200);
         } catch (\Exception $e) {
