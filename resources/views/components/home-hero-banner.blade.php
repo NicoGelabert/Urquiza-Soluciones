@@ -1,5 +1,5 @@
 <div class="home-hero-banner splide" aria-label="Urquiza Soluciones">
-    <div class="container">
+    <div class="container py-24">
         <div class="splide__track">
             <ul class="splide__list">
                 @foreach($homeherobanners as $homeherobanner)

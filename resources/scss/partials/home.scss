@@ -1,5 +1,5 @@
 .home-hero-banner{
-    @apply flex items-center justify-evenly bg-gradient-to-b from-blue to-secondary_blue text-white h-screen;
+    @apply flex items-center justify-evenly bg-gradient-to-b from-blue to-secondary_blue text-white;
     i{
         @apply text-3xl leading-none;
     }
@@ -13,7 +13,7 @@
         writing-mode: vertical-lr;
     }
     .splide__pagination{
-        @apply absolute mt-16 gap-1;
+        @apply absolute bottom-8 gap-1;
         .splide__pagination__page{
             @apply bg-white w-2 h-2;
             border-radius:20px;
