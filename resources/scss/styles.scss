@@ -46,7 +46,7 @@ body{
     // }
     .logo-hamburguer{
         svg{
-            @apply h-auto fill-blue dark:fill-white;
+            @apply w-3/4 h-auto fill-blue dark:fill-white;
         }
     }
     .toast{
@@ -73,7 +73,7 @@ body{
     .mobile-menu{
         @apply bg-white text-blue dark:bg-blue dark:text-white;
         i{
-            @apply text-3xl;
+            @apply text-2xl;
         }
     }
     header, .mobile-menu{
@@ -128,6 +128,7 @@ body{
         }
     
         .openbtn.active span{
+            @apply bg-blue;
             &:nth-of-type(1) {
                 left: 14px;
                 top: 2px;
@@ -150,7 +151,7 @@ body{
     }
     // línea divisoria
     .divider{ 
-        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-0 dark:via-white my-16;
+        @apply h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-blue to-transparent opacity-0 dark:via-white my-8 md:my-16;
     }
     // Social icons
     .social-icons{

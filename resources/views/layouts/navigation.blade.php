@@ -35,7 +35,7 @@
                 <x-application-logo/>
             </div>
             <ul class="w-3/4 flex flex-col gap-y-12">
-                <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
+                <li class="relative text-xl font-bold" @click="mobileMenuOpen = false">
                     <a href="#servicios">
                         <div class="flex gap-4 items-center">
                             <i class="fi fi-rr-tools"></i>
@@ -54,7 +54,7 @@
                         @endforeach
                     </ul> -->
                 </li>
-                <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
+                <li class="relative text-xl font-bold" @click="mobileMenuOpen = false">
                     <a href="#about">
                         <div class="flex gap-4 items-center">
                             <i class="fi fi-rr-user-helmet-safety"></i>
@@ -62,7 +62,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="relative text-3xl font-bold" @click="mobileMenuOpen = false">
+                <li class="relative text-xl font-bold" @click="mobileMenuOpen = false">
                     <a href="#contact">
                         <div class="flex gap-4 items-center">
                             <i class="fi fi-rr-envelope-dot"></i>
@@ -70,7 +70,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="relative text-3xl font-bold">
+                <li class="relative text-xl font-bold">
                     <a href="tel:+34615338966">
                         <div class="btn-urgencies">
                         <i class="fi fi-rr-phone-call"></i>
