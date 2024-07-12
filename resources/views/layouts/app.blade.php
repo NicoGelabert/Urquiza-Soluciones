@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E2RZVXP1H"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0E2RZVXP1H');
+            </script>
+        <!-- Google tag (gtag.js) -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title inertia>{{ config('app.name', 'Punto Sur Pastelería') }}</title>
+        <title inertia>{{ config('app.name', 'Urquiza Soluciones') }}</title>
         <meta name="description" content="{{__('Bienvenido a Urquiza Soluciones, somos una empresa que entiende la importancia de contar con sistemas de climatización eficientes, instalaciones eléctricas seguras y sistemas de fontanería confiables en su hogar o negocio. Por eso, nos enorgullece ofrecer servicios de primera calidad que garantizan su comodidad y tranquilidad en todo momento.')}}" lang="es">
 
         <meta name="keywords" content="{{__('Instalación de Aires Acondicionados en Málaga, carga de gas, soluciones de electricidad en Málaga, Servicio de fontanería, Reformas en general.')}}">
