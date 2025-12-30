@@ -15,6 +15,10 @@
 
     <x-coverage/>
     
+    <hr class="divider" id="contact"/>
+
+    <x-contact />
+    
     <hr class="divider" />
     
     <!-- <x-portfolio :projects="$projects" /> -->
@@ -24,10 +28,6 @@
     <!-- <hr class="divider" /> -->
     
     <x-faq :faqs="$faqs"/>
-    
-    <hr class="divider" id="contact"/>
-
-    <x-contact />
 
     <hr class="divider"/>
     
