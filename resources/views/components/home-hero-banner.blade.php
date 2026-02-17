@@ -14,7 +14,7 @@
                             <p class="animate-p">{{ __($homeherobanner->description) }}</p>
                             <div class="animate-button flex gap-4">
                                 <x-button href="#contact" class="track-contact btn-primary" data-banner-headline="{{ $homeherobanner->headline }}"><span>{{ __('Solicitar presupuesto') }}</span></x-button>
-                                <x-button href="#servicios" class="track-ver-servicio btn-secondary"><i class="fi fi-rr-arrow-small-right arrow-to-right"></i><span>{{ __('Ver servicio') }}</span></x-button>
+                                <x-button href="#servicios" class="track-ver-servicio btn-secondary" data-banner-headline="{{ $homeherobanner->headline }}"><i class="fi fi-rr-arrow-small-right arrow-to-right"></i><span>{{ __('Ver servicio') }}</span></x-button>
 
                             </div>
                         </div>
