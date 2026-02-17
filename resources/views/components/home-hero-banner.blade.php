@@ -13,8 +13,9 @@
                             <h1 class="animate-h1 text-4xl md:text-6xl leading-tight font-bold">{{ __($homeherobanner->headline) }}</h1>
                             <p class="animate-p">{{ __($homeherobanner->description) }}</p>
                             <div class="animate-button flex gap-4">
-                                <x-button href="#contact"><span>{{ __('Solicitar presupuesto') }}</span></x-button>
-                                <x-button href="#servicios" class="btn-secondary"><i class="fi fi-rr-arrow-small-right arrow-to-right"></i><span>{{ __('Ver servicio') }}</span></x-button>
+                                <x-button href="#contact" class="track-contact"><span>{{ __('Solicitar presupuesto') }}</span></x-button>
+                                <x-button href="#servicios" class="track-ver-servicio btn-secondary"><i class="fi fi-rr-arrow-small-right arrow-to-right"></i><span>{{ __('Ver servicio') }}</span></x-button>
+
                             </div>
                         </div>
                         <div class="flex w-full md:w-1/2 h-auto overflow-hidden justify-end">
