@@ -14,7 +14,7 @@ class ServiceController extends Controller
     {
         // $services = Service::with('attributes')->get();
         // return response()->json($services);
-        $services = Service::with('attributes')->get();
+        $services = Service::where('active', true)->with('attributes')->get();
         return view('services', compact('services'));
     }
 

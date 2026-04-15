@@ -32,9 +32,9 @@
                     <div class="overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/img/fontaneria-2.webp') }}" alt="" class="h-full w-full object-cover object-center">
                     </div>
-                    <div class="overflow-hidden rounded-lg">
+                    <!-- <div class="overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/img/electricidad-2.webp') }}" alt="" class="h-full w-full object-cover object-center">
-                    </div>
+                    </div> -->
                 </div>
                 <div class=" w-1/3 gap-y-4 flex flex-col">
                     <div class="overflow-hidden rounded-lg">
@@ -43,9 +43,9 @@
                     <div class="overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/img/electricidad-2.webp') }}" alt="" class="h-full w-full object-cover object-center">
                     </div>
-                    <div class="overflow-hidden rounded-lg">
+                    <!-- <div class="overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/img/aire-acondicionado-2.webp') }}" alt="" class="h-full w-full object-cover object-center">
-                    </div>
+                    </div> -->
                 </div>
                 <div class=" w-1/3 gap-y-4 flex flex-col">
                     <div class="overflow-hidden rounded-lg">
@@ -54,9 +54,9 @@
                     <div class="overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/img/aire-acondicionado-3.webp') }}" alt="" class="h-full w-full object-cover object-center">
                     </div>
-                    <div class="overflow-hidden rounded-lg">
+                    <!-- <div class="overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/img/electricidad.webp') }}" alt="" class="h-full w-full object-cover object-center">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

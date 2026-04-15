@@ -48,6 +48,10 @@
                                     <CustomInput class="mb-2" v-model="homeHeroBanner.service" label="Service" />
                                     <CustomInput class="mb-2" v-model="homeHeroBanner.title" label="Title" />
                                     <CustomInput type="file" class="mb-2" label="Image" @change="file => homeHeroBanner.image = file" />
+                                    <div class="flex flex-col gap-2">
+                                        <h3 class="text-lg font-bold">Published</h3>
+                                        <CustomInput type="checkbox" class="mb-2" v-model="homeHeroBanner.published" label="Published" />
+                                    </div>
                                 </div>
                                 <footer class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                     <button type="submit"
@@ -95,7 +99,8 @@ const homeHeroBanner = ref({
     description: props.homeHeroBanner.description,
     link: props.homeHeroBanner.link,
     service: props.homeHeroBanner.service,
-    title: props.homeHeroBanner.title
+    title: props.homeHeroBanner.title,
+    published: props.homeHeroBanner.published
 })
 console.log(homeHeroBanner)
 const loading = ref(false)
@@ -115,7 +120,8 @@ onUpdated(() => {
         description: props.homeHeroBanner.description,
         link: props.homeHeroBanner.link,
         service: props.homeHeroBanner.service,
-        title: props.homeHeroBanner.title
+        title: props.homeHeroBanner.title,
+        published: props.homeHeroBanner.published
     }
 })
 

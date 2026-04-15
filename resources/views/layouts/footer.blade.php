@@ -9,13 +9,19 @@
         </div>
         <div class="footer-menu">
             <div>
-                <h6>{{ __('Servicios') }}</h6>
+                <a href="#servicios">
+                    <h6>{{ __('Servicios') }}</h6>
+                </a>
             </div>
             <div>
-                <h6>{{ __('Sobre Nosotros') }}</h6>
+                <a href="#about">
+                    <h6>{{ __('Sobre Nosotros') }}</h6>
+                </a>
             </div>
             <div>
-                <h6>{{ __('Contacto') }}</h6>
+                <a href="#contact">
+                    <h6>{{ __('Contacto') }}</h6>
+                </a>
             </div>
             <div>
                 <a href="tel:+34615338966">
@@ -29,7 +35,7 @@
     </div>
     <hr class="footer-divider" />
     <div class="post-footer">
-        <span class="developed-by">{{__('Sitio diseñado y desarrollado por')}}<a href="https://nicolasgelabert.com.ar" target="_blank"> Nicolás Gelabert</a></span>
+        <span class="developed-by">{{__('Sitio diseñado y desarrollado por')}}<a href="https://chimicreativo.es/" target="_blank"> Chimi Creativo</a></span>
         <ul class="flex gap-x-4">
             @foreach (Config::get('languages') as $lang => $language)
                 @if ($lang != App::getLocale())

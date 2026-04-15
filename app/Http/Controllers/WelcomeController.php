@@ -14,16 +14,16 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $homeherobanners = HomeHeroBanner::all();
-        $features = Feature::all();
-        $services = Service::all();
+        $homeherobanners = HomeHeroBanner::where('published', true)->get();
+        $services = Service::where('active', true)->get();
+        $features = Feature::where('published', true)->get();
         $clients = Client::all();
         $projects = Project::with('tags', 'clients')->get();
         $faqs = Faq::all();
         return view('welcome', compact(
             'homeherobanners',
-            'features',
             'services',
+            'features',
             'clients',
             'projects',
             'faqs'

@@ -9,8 +9,7 @@ class HomeHeroBannerController extends Controller
 {
     public function index()
     {
-        $homeHeroBanners = HomeHeroBanner::all();
-        return $homeHeroBanners;
+        
     }
 
 }

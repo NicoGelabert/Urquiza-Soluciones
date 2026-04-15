@@ -91,6 +91,7 @@ export function createHomeHeroBanner({commit}, homeHeroBanner) {
     form.append('link', homeHeroBanner.link);
     form.append('service', homeHeroBanner.service);
     form.append('title', homeHeroBanner.title);
+    form.append('published', homeHeroBanner.published);
     homeHeroBanner = form;
   }
   return axiosClient.post('/homeherobanners', homeHeroBanner)
@@ -107,6 +108,7 @@ export function updateHomeHeroBanner({commit}, homeHeroBanner) {
     form.append('link', homeHeroBanner.link);
     form.append('service', homeHeroBanner.service);
     form.append('title', homeHeroBanner.title);
+    form.append('published', homeHeroBanner.published);
     form.append('_method', 'PUT');
     homeHeroBanner = form;
   } else {
@@ -422,7 +424,7 @@ export function createService({commit}, service) {
     const form = new FormData();
     form.append('name', service.name);
     form.append('icon', service.icon);
-    form.append('active', service.active ? 1 : 0);
+    form.append('active', service.active);
     form.append('description', service.description);
     // Agregar atributos al FormData
     if (service.attributes && service.attributes.length) {
@@ -442,7 +444,7 @@ export function updateService({commit}, service) {
     const form = new FormData();
     form.append('name', service.name);
     form.append('icon', service.icon);
-    form.append('active', service.active ? 1 : 0);
+    form.append('active', service.active);
     form.append('description', service.description);
     // Agregar atributos al FormData
     if (service.attributes && service.attributes.length) {
