@@ -108,6 +108,36 @@ En [Google reCAPTCHA Admin](https://www.google.com/recaptcha/admin), añadir:
 - `urquizasoluciones.es`
 - `www.urquizasoluciones.es`
 
+## Error: `Unable to locate file in Vite manifest: resources/css/app.css`
+
+Significa que **no se compiló el frontend** en el servidor (falta `public/build/manifest.json`) o el código desplegado no es el último del repo.
+
+Por SSH, en la raíz del proyecto:
+
+```bash
+cd /home/u324271993/domains/urquizasoluciones.es
+git pull origin main
+npm ci
+npm run build
+php artisan view:clear
+php artisan config:clear
+```
+
+Comprobá que exista el manifest:
+
+```bash
+ls -la public/build/manifest.json
+```
+
+Verificá que el layout sea el nuevo (solo `resources/views/app.blade.php`, **sin** `resources/views/layouts/app.blade.php`):
+
+```bash
+grep rootView app/Http/Middleware/HandleInertiaRequests.php
+ls resources/views/
+```
+
+`rootView` debe ser `'app'`. Si ves `layouts/app.blade.php`, borrá archivos del sitio viejo y volvé a clonar el repo.
+
 ## 9. Verificación post-deploy
 
 - [ ] Home ES e EN cargan
@@ -125,14 +155,34 @@ En [Google reCAPTCHA Admin](https://www.google.com/recaptcha/admin), añadir:
 3. Probar con dominio o subdominio de prueba si Hostinger lo permite
 4. Cuando todo esté OK, el dominio principal ya apunta al nuevo `public/`
 
-## Actualizaciones futuras
+## Actualizaciones futuras (sin Node en el servidor)
+
+### Cambios de CSS / Vue / JS
 
 ```bash
-git pull
-composer install --no-dev --optimize-autoloader
-npm ci && npm run build
-php artisan migrate --force
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
+# 1. Local
+npm run build
+git add .
+git commit -m "..."
+git push origin master:main
+
+# 2. SSH (código PHP/Vue fuente)
+cd /home/u324271993/domains/urquizasoluciones.es
+git pull origin main
+
+# 3. FTP / File Manager — subir carpeta public/build/ completa
+
+# 4. SSH (opcional)
+/opt/alt/php83/usr/bin/php artisan view:clear
+```
+
+### Solo cambios PHP (sin tocar estilos)
+
+```bash
+git push origin master:main          # local
+git pull origin main                 # SSH
+/opt/alt/php83/usr/bin/php artisan migrate --force   # si hay migraciones
+/opt/alt/php83/usr/bin/php artisan config:cache
+/opt/alt/php83/usr/bin/php artisan route:cache
+/opt/alt/php83/usr/bin/php artisan view:cache
 ```

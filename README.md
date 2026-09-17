@@ -57,16 +57,25 @@ Configurar virtual host `urquizasoluciones.test` apuntando a `public/`.
 
 ## Despliegue (Hostinger)
 
-1. Subir código y configurar `.env` de producción
-2. `composer install --no-dev --optimize-autoloader`
-3. `php artisan migrate --force`
-4. `php artisan storage:link`
-5. `npm ci && npm run build`
-6. Configurar cron para cola: `* * * * * php artisan queue:work --stop-when-empty`
+Guía detallada: [docs/deploy-hostinger.md](docs/deploy-hostinger.md)
+
+Resumen por SSH:
+
+```bash
+git clone https://github.com/NicoGelabert/Urquiza-Soluciones.git .
+cp .env.production.example .env   # completar valores
+php artisan key:generate
+bash scripts/deploy-hostinger.sh
+php artisan migrate --force --seed   # solo primera vez
+```
+
+Document root del dominio → carpeta **`public/`**.
+
+Cron (emails en cola): `* * * * * cd /ruta/proyecto && php artisan queue:work --stop-when-empty`
 
 ## Fases
 
 - [x] Fase 1: Proyecto base, modelos, seeders, web pública básica
 - [x] Fase 2: Admin CRUD, formularios contacto/presupuesto, emails, legal público
 - [x] Fase 3: Diseño público, slider, componentes UI
-- [ ] Fase 4: Deploy Hostinger
+- [ ] Fase 4: Deploy Hostinger (repo en GitHub listo; falta configurar servidor)

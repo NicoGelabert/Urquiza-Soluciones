@@ -6,6 +6,8 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="icon" href="/favicon.ico" sizes="any">
+
         @if(config('analytics.google_id') || config('analytics.clarity_id'))
         <script>
             window.__ANALYTICS__ = {
