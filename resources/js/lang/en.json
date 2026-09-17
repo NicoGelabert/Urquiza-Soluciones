@@ -1,0 +1,75 @@
+{
+    "menu": {
+        "open": "Open menu",
+        "close": "Close menu",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram"
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "contact": "Contact",
+        "quote": "Quote"
+    },
+    "cta": {
+        "request_quote": "Request a quote",
+        "view_service": "View service",
+        "free_quote": "Free quote",
+        "call_emergency": "Emergency",
+        "emergency_24h": "Available 24 hours",
+        "contact_us": "Contact us"
+    },
+    "footer": {
+        "legal": "Legal",
+        "legal_notice": "Legal notice",
+        "privacy": "Privacy",
+        "cookies": "Cookies",
+        "contact": "Contact",
+        "tagline": "Air conditioning, electrical and plumbing services on the Costa del Sol.",
+        "design_by": "Design and development by"
+    },
+    "home": {
+        "services_detail": "Service details",
+        "about": "About us",
+        "service_area": "Service area",
+        "faq": "Frequently asked questions"
+    },
+    "service": {
+        "what_we_offer": "What we offer",
+        "faq": "FAQ"
+    },
+    "quote": {
+        "subtitle": "Tell us what you need and we'll send you a personalized quote at no cost."
+    },
+    "cookies": {
+        "banner_text": "We use first- and third-party cookies to measure site usage and improve your experience. You can accept all, reject them, or choose which to allow.",
+        "accept_all": "Accept all",
+        "reject_all": "Reject all",
+        "manage": "Manage cookies",
+        "manage_title": "Manage cookies",
+        "manage_text": "Choose which optional cookies to allow. Technical cookies are required for the site to work.",
+        "technical": "Technical cookies",
+        "technical_desc": "Required for security, session, and remembering your choice.",
+        "always_on": "Always active",
+        "analytics": "Google Analytics",
+        "analytics_desc": "Visit and usage statistics.",
+        "clarity": "Microsoft Clarity",
+        "clarity_desc": "Heatmaps and session recordings to improve the experience.",
+        "back": "Back",
+        "save": "Save preferences"
+    },
+    "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "zone": "Area",
+        "message": "Message",
+        "service": "Service",
+        "select": "Select...",
+        "select_service": "Select a service...",
+        "describe_need": "Describe your needs",
+        "message_placeholder": "Tell us what you need...",
+        "send_message": "Send message",
+        "recaptcha_notice": "This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply."
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "menu": {
+        "open": "Abrir menú",
+        "close": "Cerrar menú",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram"
+    },
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "contact": "Contacto",
+        "quote": "Presupuesto"
+    },
+    "cta": {
+        "request_quote": "Solicitar presupuesto",
+        "view_service": "Ver servicio",
+        "free_quote": "Presupuesto sin cargo",
+        "call_emergency": "Urgencias",
+        "emergency_24h": "Disponibles 24 horas",
+        "contact_us": "Contáctenos"
+    },
+    "footer": {
+        "legal": "Legal",
+        "legal_notice": "Aviso legal",
+        "privacy": "Privacidad",
+        "cookies": "Cookies",
+        "contact": "Contacto",
+        "tagline": "Servicios de climatización, electricidad y fontanería en la Costa del Sol.",
+        "design_by": "Diseño y desarrollo por"
+    },
+    "home": {
+        "services_detail": "Detalle de servicios",
+        "about": "Sobre nosotros",
+        "service_area": "Zona de trabajo",
+        "faq": "Preguntas frecuentes"
+    },
+    "service": {
+        "what_we_offer": "Qué ofrecemos",
+        "faq": "Preguntas frecuentes"
+    },
+    "quote": {
+        "subtitle": "Cuéntanos qué necesitas y te enviaremos un presupuesto personalizado sin cargo."
+    },
+    "cookies": {
+        "banner_text": "Usamos cookies propias y de terceros para medir el uso del sitio y mejorar tu experiencia. Podés aceptar todas, rechazarlas o elegir cuáles permitir.",
+        "accept_all": "Aceptar todas",
+        "reject_all": "Rechazar todas",
+        "manage": "Gestionar cookies",
+        "manage_title": "Gestionar cookies",
+        "manage_text": "Elegí qué cookies opcionales querés permitir. Las cookies técnicas son necesarias para el funcionamiento del sitio.",
+        "technical": "Cookies técnicas",
+        "technical_desc": "Necesarias para la seguridad, sesión y recordar tu elección.",
+        "always_on": "Siempre activas",
+        "analytics": "Google Analytics",
+        "analytics_desc": "Estadísticas de visitas y uso del sitio.",
+        "clarity": "Microsoft Clarity",
+        "clarity_desc": "Mapas de calor y grabaciones de sesión para mejorar la experiencia.",
+        "back": "Volver",
+        "save": "Guardar preferencias"
+    },
+    "form": {
+        "name": "Nombre",
+        "email": "Email",
+        "phone": "Teléfono",
+        "zone": "Zona",
+        "message": "Mensaje",
+        "service": "Servicio",
+        "select": "Seleccionar...",
+        "select_service": "Seleccionar servicio...",
+        "describe_need": "Describe tu necesidad",
+        "message_placeholder": "Cuéntanos qué necesitas...",
+        "send_message": "Enviar mensaje",
+        "recaptcha_notice": "Este sitio está protegido por reCAPTCHA y se aplican la Política de privacidad y los Términos del servicio de Google."
+    }
+}
