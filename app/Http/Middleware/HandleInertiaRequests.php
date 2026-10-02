@@ -36,8 +36,9 @@ class HandleInertiaRequests extends Middleware
             ],
             'analytics' => [
                 'google_id' => config('analytics.google_id'),
+                'gtm_id' => config('analytics.gtm_id'),
                 'clarity_id' => config('analytics.clarity_id'),
-                'enabled' => (bool) (config('analytics.google_id') || config('analytics.clarity_id')),
+                'enabled' => (bool) (config('analytics.google_id') || config('analytics.gtm_id') || config('analytics.clarity_id')),
             ],
             'recaptcha' => [
                 'site_key' => config('recaptcha.site_key'),

@@ -28,17 +28,19 @@ const cookiesUrl = computed(() => urlLegal(locale.value, 'cookies'));
 const privacyUrl = computed(() => urlLegal(locale.value, 'privacidad'));
 
 onMounted(() => {
-    const { google_id, clarity_id } = page.props.analytics as {
+    const { google_id, gtm_id, clarity_id } = page.props.analytics as {
         google_id: string | null;
+        gtm_id: string | null;
         clarity_id: string | null;
     };
 
     syncAnalyticsConfig({
         googleId: google_id,
+        gtmId: gtm_id,
         clarityId: clarity_id,
     });
 
-    tieneGoogle.value = Boolean(google_id);
+    tieneGoogle.value = Boolean(google_id || gtm_id);
     tieneClarity.value = Boolean(clarity_id);
 
     const prefs = getPreferences();

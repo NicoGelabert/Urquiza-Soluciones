@@ -5,13 +5,20 @@ import { PageProps as AppPageProps } from './';
 
 interface AnalyticsConfig {
     googleId: string | null;
+    gtmId: string | null;
     clarityId: string | null;
+}
+
+interface DataLayerObject {
+    event?: string;
+    [key: string]: string | number | boolean | undefined;
 }
 
 declare global {
     interface Window {
         axios: AxiosInstance;
         __ANALYTICS__?: AnalyticsConfig;
+        dataLayer?: DataLayerObject[];
         gtag?: (...args: unknown[]) => void;
         clarity?: (...args: unknown[]) => void;
         grecaptcha?: {

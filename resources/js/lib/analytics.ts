@@ -13,6 +13,7 @@ export type AnalyticsEventParams = Record<string, string | number | boolean>;
 
 export interface AnalyticsConfig {
     googleId: string | null;
+    gtmId: string | null;
     clarityId: string | null;
 }
 
@@ -28,7 +29,9 @@ export const cookieBannerVisible = ref(false);
 export const cookieSettingsVisible = ref(false);
 
 export function isAnalyticsConfigured(): boolean {
-    return Boolean(window.__ANALYTICS__?.googleId || window.__ANALYTICS__?.clarityId);
+    return Boolean(
+        window.__ANALYTICS__?.googleId || window.__ANALYTICS__?.gtmId || window.__ANALYTICS__?.clarityId,
+    );
 }
 
 export function syncAnalyticsConfig(config?: AnalyticsConfig): void {
@@ -38,8 +41,14 @@ export function syncAnalyticsConfig(config?: AnalyticsConfig): void {
 
     window.__ANALYTICS__ = {
         googleId: config.googleId ?? null,
+        gtmId: config.gtmId ?? null,
         clarityId: config.clarityId ?? null,
     };
+}
+
+function pushDataLayer(payload: Record<string, string | number | boolean>): void {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
 }
 
 export function getPreferences(): CookiePreferences | null {
@@ -99,6 +108,9 @@ function updateGtagConsent(analytics: boolean): void {
 
     window.gtag('consent', 'update', {
         analytics_storage: analytics ? 'granted' : 'denied',
+        ad_storage: analytics ? 'granted' : 'denied',
+        ad_user_data: analytics ? 'granted' : 'denied',
+        ad_personalization: analytics ? 'granted' : 'denied',
     });
 }
 
@@ -167,19 +179,37 @@ export function saveCustomPreferences(analytics: boolean, clarity: boolean): voi
 }
 
 export function trackPageView(path: string, title?: string): void {
-    if (!hasAnalyticsConsent() || !window.gtag || !window.__ANALYTICS__?.googleId) {
+    if (!hasAnalyticsConsent()) {
         return;
     }
 
-    window.gtag('event', 'page_view', {
-        page_path: path,
-        page_title: title ?? document.title,
-    });
+    const pageTitle = title ?? document.title;
+
+    if (window.gtag && window.__ANALYTICS__?.googleId) {
+        window.gtag('event', 'page_view', {
+            page_path: path,
+            page_title: pageTitle,
+        });
+    }
+
+    if (window.__ANALYTICS__?.gtmId) {
+        pushDataLayer({
+            event: 'page_view',
+            page_path: path,
+            page_title: pageTitle,
+        });
+    }
 }
 
 export function trackEvent(event: string, params: AnalyticsEventParams = {}): void {
-    if (hasAnalyticsConsent() && window.gtag) {
-        window.gtag('event', event, params);
+    if (hasAnalyticsConsent()) {
+        if (window.gtag && window.__ANALYTICS__?.googleId) {
+            window.gtag('event', event, params);
+        }
+
+        if (window.__ANALYTICS__?.gtmId) {
+            pushDataLayer({ event, ...params });
+        }
     }
 
     if (hasClarityConsent() && window.clarity) {

@@ -56,6 +56,14 @@ Copiar `.env.production.example` a `.env` y completar:
 | `ADMIN_*` | contraseñas fuertes (no las de desarrollo) |
 | Analytics / reCAPTCHA | IDs de producción |
 
+**Google Tag Manager (Google Ads / GA4):**
+
+- En `.env` de producción: `GOOGLE_TAG_MANAGER_ID=GTM-XXXXXXX` (el contenedor que ves en tagmanager.google.com).
+- Si GA4 va **dentro** de GTM, deja `GOOGLE_ANALYTICS_ID` vacío para no contar visitas dos veces.
+- Tras cambiar variables: `php artisan config:clear` y `php artisan config:cache`.
+- En GTM, crea un disparador **Evento personalizado** con nombre `page_view` si quieres pageviews en la SPA (Inertia ya envía ese evento al `dataLayer` cuando el usuario acepta cookies).
+- Tag Assistant: el contenedor GTM se carga aunque las cookies estén denegadas; los tags de medición solo disparan tras **Aceptar cookies** (Consent Mode).
+
 Generar clave de aplicación:
 
 ```bash

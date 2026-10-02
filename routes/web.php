@@ -8,6 +8,7 @@ use App\Http\Controllers\PaginaLegalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Public\ContactoController;
 use App\Http\Controllers\Public\HomeController;
+use App\Http\Controllers\Public\LandingController;
 use App\Http\Controllers\Public\LegalController as PublicLegalController;
 use App\Http\Controllers\Public\PresupuestoController;
 use App\Http\Controllers\Public\ServicioController as PublicServicioController;
@@ -29,6 +30,7 @@ Route::post('/contacto', [ContactoController::class, 'store'])->middleware('thro
 Route::get('/presupuesto', [PresupuestoController::class, 'index'])->name('presupuesto.index');
 Route::post('/presupuesto', [PresupuestoController::class, 'store'])->middleware('throttle:5,1')->name('presupuesto.store');
 Route::get('/legal/{slug}', [PublicLegalController::class, 'show'])->name('legal.show');
+Route::get('/lp/{slug}', [LandingController::class, 'show'])->name('landing.show');
 
 Route::prefix('en')->group(function () {
     Route::get('/', HomeController::class)->name('en.home');
@@ -39,6 +41,7 @@ Route::prefix('en')->group(function () {
     Route::get('/quote', [PresupuestoController::class, 'index'])->name('en.presupuesto.index');
     Route::post('/quote', [PresupuestoController::class, 'store'])->middleware('throttle:5,1')->name('en.presupuesto.store');
     Route::get('/legal/{slug}', [PublicLegalController::class, 'show'])->name('en.legal.show');
+    Route::get('/lp/{slug}', [LandingController::class, 'show'])->name('en.landing.show');
 });
 
 Route::get('/dashboard', DashboardController::class)
